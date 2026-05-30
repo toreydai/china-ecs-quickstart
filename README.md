@@ -17,8 +17,6 @@
 6. 创建 IAM Role 后需 `sleep 10` 再使用，避免 IAM 传播延迟导致权限未生效；CodeDeploy 蓝绿发布的 Blue/Green Target Group 必须在 ECS Service 创建前就已存在。
 7. Demo08 创建 6 个 Interface VPC Endpoint 按小时计费，实验结束后及时删除；Demo09（ECS Exec）前需在操作机安装 `session-manager-plugin`；Demo11 清理时必须先删 Mount Target 再删 EFS File System。
 
-完整限制与卡点说明详见 [`demo-limit.md`](demo-limit.md)。
-
 ---
 
 ## Demo 列表
