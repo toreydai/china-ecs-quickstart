@@ -17,13 +17,13 @@
 6. 创建 IAM Role 后需 `sleep 10` 再使用，避免 IAM 传播延迟导致权限未生效；CodeDeploy 蓝绿发布的 Blue/Green Target Group 必须在 ECS Service 创建前就已存在。
 7. Demo08 创建 6 个 Interface VPC Endpoint 按小时计费，实验结束后及时删除；Demo09（ECS Exec）前需在操作机安装 `session-manager-plugin`；Demo11 清理时必须先删 Mount Target 再删 EFS File System。
 
-完整限制与卡点说明详见 [`demo-limit.md`](demo-limit.md)。
-
 ---
 
 ## Demo 列表
 
 建议先完成 **基础**，再按需要选择 **进阶**。基础覆盖 ECS Fargate 从环境准备、镜像发布、服务部署、发布策略、权限安全、弹性伸缩到 CI/CD 的最小完整闭环；进阶用于补充存储、服务通信、蓝绿发布和成本治理能力。
+
+* [架构文档 — 全局拓扑与执行流程](docs/architecture.md)
 
 ## 基础
 
@@ -82,4 +82,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 免责声明
 
-本 Workshop 仅供学习和测试用途。执行过程中会创建 AWS 资源并产生费用，请在实验完成后及时清理资源。作者不对因使用本 Workshop 产生的任何费用或损失承担责任。所有命令和配置仅作为示例参考，生产环境使用前请根据实际需求进行安全评估和调整。
+本项目仅供学习与技术参考，不构成生产部署方案。运行过程中会创建 AWS 资源并产生费用，请在实验结束后及时清理。作者不对因使用本项目产生的任何费用或损失承担责任。本项目与 Amazon Web Services 无官方关联，相关服务的可用性与定价以 AWS 官方文档为准。生产环境使用前请根据实际需求进行安全评估与调整。
